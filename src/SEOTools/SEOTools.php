@@ -123,6 +123,7 @@ class SEOTools implements SEOContract
     public function generate($minify = false)
     {
         $html = $this->metatags()->generate();
+        /*
         $html .= PHP_EOL;
         $html .= $this->opengraph()->generate();
         $html .= PHP_EOL;
@@ -130,7 +131,8 @@ class SEOTools implements SEOContract
         $html .= PHP_EOL;
         // if json ld multi is use don't show simple json ld
         $html .= $this->jsonLdMulti()->generate() ?? $this->jsonLd()->generate();
-
+        */
+        
         return ($minify) ? str_replace(PHP_EOL, '', $html) : $html;
     }
 }
